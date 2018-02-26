@@ -213,6 +213,7 @@ lam = 1
 
 # ----------------- Training -----------------------#
 print("Training....")
+lam = 0.1
 theta = fmin_cg(CostFunction, initial_nn_params, fprime = gradient, args=(input_layer_size,hidden_layer_size,num_labels,X, y, lam), maxiter=50)
 # print(theta)
 
